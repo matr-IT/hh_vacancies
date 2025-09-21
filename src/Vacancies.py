@@ -5,14 +5,7 @@ class VacanciesAbstract(ABC):
     """
     Абстрактный класс для обработки вакансий
     """
-
-    @abstractmethod
-    def __validate_salary(self, salary_from_data):
-        pass
-
-    @abstractmethod
-    def __validate_short_description(self, description_from_data):
-        pass
+    pass
 
 
 class Vacancies(VacanciesAbstract):
@@ -31,6 +24,7 @@ class Vacancies(VacanciesAbstract):
         """
         Инициализация экземпляра
         """
+        super().__init__()
         self.name = name
         self.url = url
         self.salary = self.__validate_salary(salary)
@@ -104,4 +98,4 @@ class Vacancies(VacanciesAbstract):
         }
 
     def __str__(self):
-        return f"Название: {self.name}\n"
+        return f"Название: {self.name}\nСсылка на вакансию: {self.url}"

@@ -45,6 +45,4 @@ class HH(HHAbstract):
         return self.vacancies
 
 
-# Проверка работы методов класса
-hh = HH()
-print(hh.load_vacancies("Инженер"))
+
