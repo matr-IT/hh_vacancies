@@ -46,4 +46,4 @@ class HH(HHAbstract):
 
 # Проверка работы методов класса
 hh = HH()
-print(hh.load_vacancies('Инженер'))
+print(hh.load_vacancies("Инженер"))
