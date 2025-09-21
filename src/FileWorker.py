@@ -31,6 +31,9 @@ class JsonFileWorker(FileWorker):
                 json.dump([], f)
 
     def add_vacancy(self, vacancy):
+        """
+        Метод добавления вакансии в файл
+        """
         with open(self.__file, 'r', encoding='utf-8') as f:
             vacancies = json.load(f)
         if vacancy not in vacancies:
@@ -39,9 +42,15 @@ class JsonFileWorker(FileWorker):
             json.dump(vacancies, f, indent=4, ensure_ascii=False)
 
     def get_vacancies(self):
+        """
+        Метод получения вакансий из файла
+        """
         with open(self.__file, 'r', encoding='utf-8') as f:
             vacancies = json.load(f)
         return vacancies
 
     def delete_vacancy(self, vacancy):
+        """
+        Метод удаления вакансий
+        """
         pass
