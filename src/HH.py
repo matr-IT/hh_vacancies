@@ -12,7 +12,9 @@ class HHAbstract(ABC):
 
     @abstractmethod
     def load_vacancies(self, keyword: str):
-        """ " Получение вакансий"""
+        """
+        Получение вакансий
+        """
         pass
 
 
@@ -29,6 +31,9 @@ class HH(HHAbstract):
         super().__init__()
 
     def load_vacancies(self, keyword):
+        """
+        Получение вакансий через API HH
+        """
         self.params["text"] = keyword
         while self.params.get("page") != 20:
             response = requests.get(self.url, headers=self.headers, params=self.params)
