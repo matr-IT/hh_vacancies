@@ -81,6 +81,9 @@ class Vacancies(VacanciesAbstract):
 
     @classmethod
     def from_dict(cls, dict_vacancies):
+        """
+        Метод преобразования словаря в экземпляр класса
+        """
         return cls(
             name=dict_vacancies.get("name", ""),
             url=dict_vacancies.get("url", ""),
@@ -91,6 +94,9 @@ class Vacancies(VacanciesAbstract):
         )
 
     def to_dict(self):
+        """
+        Метод преобразования экземпляра класса в словарь
+        """
         return {
             "name": self.name,
             "url": self.url,
