@@ -1,10 +1,11 @@
-from abc import ABC, abstractmethod
+from abc import ABC
 
 
 class VacanciesAbstract(ABC):
     """
     Абстрактный класс для обработки вакансий
     """
+
     pass
 
 

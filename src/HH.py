@@ -43,6 +43,3 @@ class HH(HHAbstract):
             self.vacancies.extend(vacancies)
             self.params["page"] += 1
         return self.vacancies
-
-
-
