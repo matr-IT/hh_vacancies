@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 
 class HHAbstract(ABC):
     """
-    Абстрактный класс для парсеров вакансий
+    Абстрактный класс для получения вакансий
     """
 
     def __init__(self):
@@ -45,5 +45,5 @@ class HH(HHAbstract):
 
 
 # Проверка работы методов класса
-# hh = HH()
-# print(hh.load_vacancies('Инженер'))
+hh = HH()
+print(hh.load_vacancies('Инженер'))
