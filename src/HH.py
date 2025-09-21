@@ -37,7 +37,13 @@ class HH(HHAbstract):
         self.params["text"] = keyword
         while self.params.get("page") != 20:
             response = requests.get(self.url, headers=self.headers, params=self.params)
+            response.raise_for_status()
             vacancies = response.json()["items"]
             self.vacancies.extend(vacancies)
             self.params["page"] += 1
         return self.vacancies
+
+
+# Проверка работы методов класса
+# hh = HH()
+# print(hh.load_vacancies('Инженер'))
