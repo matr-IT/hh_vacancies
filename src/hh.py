@@ -8,9 +8,6 @@ class HHAbstract(ABC):
     Абстрактный класс для получения вакансий
     """
 
-    def __init__(self):
-        self.vacancies = []
-
     @abstractmethod
     def load_vacancies(self, keyword: str):
         """
