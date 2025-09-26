@@ -10,7 +10,7 @@ def user_interaction():
     """
     api_hh = HH()
     file_worker_json = JsonFileWorker()
-    user_input = input("Требуется ввод: ")
+    user_input = input("Введите название вакансии или ключевые слова: ")
 
     vacancies_hh = api_hh.load_vacancies(user_input)
 
