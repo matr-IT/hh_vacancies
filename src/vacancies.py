@@ -16,20 +16,20 @@ class Vacancies(VacanciesAbstract):
 
     __slots__ = ("name", "url", "salary", "short_description")
 
-    name: str
-    url: str
-    salary: int
-    short_description: str
+    __name: str
+    __url: str
+    __salary: int
+    __short_description: str
 
     def __init__(self, name, url, salary, short_description):
         """
         Инициализация экземпляра
         """
         super().__init__()
-        self.name = name
-        self.url = url
-        self.salary = self.__validate_salary(salary)
-        self.short_description = self.__validate_short_description(short_description)
+        self.__name = name
+        self.__url = url
+        self.__salary = self.__validate_salary(salary)
+        self.__short_description = self.__validate_short_description(short_description)
 
     def __validate_salary(self, salary_from_data) -> int:
         """
@@ -54,23 +54,23 @@ class Vacancies(VacanciesAbstract):
         """
         Метод сравнения "Меньше"
         """
-        return self.salary < other.salary
+        return self.__salary < other.__salary
 
     def __gt__(self, other):
         """
         Метод сравнения "Больше"
         """
-        return self.salary > other.salary
+        return self.__salary > other.__salary
 
     def __eq__(self, other):
         """
         Метод сравнения "Равно"
         """
         return (
-            self.name == other.name
-            and self.salary == other.salary
-            and self.url == other.url
-            and self.short_description == other.short_description
+            self.__name == other.__name
+            and self.__salary == other.__salary
+            and self.__url == other.__url
+            and self.__short_description == other.__short_description
         )
 
     @classmethod
@@ -92,11 +92,11 @@ class Vacancies(VacanciesAbstract):
         Метод преобразования экземпляра класса в словарь
         """
         return {
-            "name": self.name,
-            "url": self.url,
-            "salary": self.salary,
-            "short_description": self.short_description,
+            "name": self.__name,
+            "url": self.__url,
+            "salary": self.__salary,
+            "short_description": self.__short_description,
         }
 
     def __str__(self):
-        return f"Название: {self.name}\nСсылка на вакансию: {self.url}"
+        return f"Название: {self.__name}\nСсылка на вакансию: {self.__url}\nЗарплата: {self.__salary/100}"
