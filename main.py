@@ -1,6 +1,6 @@
-from src.FileWorker import JsonFileWorker
-from src.HH import HH
-from src.Vacancies import Vacancies
+from src.file_worker import JsonFileWorker
+from src.hh import HH
+from src.vacancies import Vacancies
 from src.vacancies_sorting import vacancies_sorting
 
 

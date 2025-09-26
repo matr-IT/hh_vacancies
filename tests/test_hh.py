@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import patch, MagicMock
-from src.HH import HH
+from src.hh import HH
 
 def make_mock_response(items, status_code=200):
     mock_resp = MagicMock()

@@ -2,7 +2,7 @@ import pytest
 import tempfile
 import os
 import json
-from src.FileWorker import JsonFileWorker
+from src.file_worker import JsonFileWorker
 
 
 @pytest.fixture

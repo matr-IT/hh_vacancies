@@ -1,5 +1,5 @@
 import pytest
-from src.Vacancies import Vacancies
+from src.vacancies import Vacancies
 
 def test_validate_salary():
     v1 = Vacancies("name", "url", {"from": 1000, "to": 2000}, "desc")
